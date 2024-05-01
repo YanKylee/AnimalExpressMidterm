@@ -9,11 +9,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\Animalexpress Logo.png" />
+    <None Remove="Images\Cat.png" />
+    <None Remove="Images\CatFood.png" />
+    <None Remove="Images\Dog.png" />
+    <None Remove="Images\DogAdult.png" />
+    <None Remove="Images\DogFood.png" />
+    <None Remove="Images\Kitten.png" />
   </ItemGroup>
+
+  
 
   <ItemGroup>
     <Resource Include="Images\Animalexpress Logo.png" />
+    <Resource Include="Images\Cat.png" />
+    <Resource Include="Images\CatFood.png" />
+    <Resource Include="Images\Dog.png" />
+    <Resource Include="Images\DogAdult.png" />
+    <Resource Include="Images\DogFood.png" />
+    <Resource Include="Images\Kitten.png" />
   </ItemGroup>
 
 </Project>

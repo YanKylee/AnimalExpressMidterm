@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnimalExpressMidterm"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="700">
+        Title="MainWindow" Height="450" Width="700" MinHeight="450" MaxHeight="450" MinWidth="700" MaxWidth="450" Background="#FFD2EBFF">
     <Grid>
-        <StackPanel x:Name="Menu" Margin="20" Orientation="Vertical" Visibility="Visible">
+        <StackPanel x:Name="Login" Margin="20" Orientation="Vertical" Visibility="Collapsed">
             <Image Source="/Images/Animalexpress Logo.png" Margin="0" Width="385" Height="224"/>
-            <TextBox Margin="0 5 0 0" Width="200" Height="30" Text="Username" FontSize="20" >
+            <TextBox Margin="0 5 0 0" Width="200" Height="30" Text="Username" FontSize="20" BorderBrush="Black" BorderThickness="0"  >
                 <TextBox.Template>
                     <ControlTemplate TargetType="TextBox">
                         <Border Background="{TemplateBinding Background}" 
@@ -22,7 +22,7 @@
                     </ControlTemplate>
                 </TextBox.Template>
             </TextBox>
-            <TextBox Margin="0 10 0 0" Width="200" Height="30" Text="Password" FontSize="20">
+            <TextBox Margin="0 10 0 0" Width="200" Height="30" Text="Password" FontSize="20" BorderBrush="Black" BorderThickness="0" >
                 <TextBox.Template>
                     <ControlTemplate TargetType="TextBox">
                         <Border Background="{TemplateBinding Background}" 
@@ -36,7 +36,7 @@
                 </TextBox.Template>
             </TextBox>
 
-            <Button Margin="0 20 0 0" Width="100" Height="25" Background="LightBlue" Content="Login" FontSize="15" FontFamily="vendara">
+            <Button Margin="0 20 0 0" Width="100" Height="25" Background="#FF80DFFF" Content="Login" FontSize="15" FontFamily="vendara" BorderThickness="0">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="{TemplateBinding Background}" 
@@ -55,32 +55,16 @@
 
         <StackPanel x:Name="Category" Margin="20 20 20 20" Orientation="Vertical" Visibility="Collapsed">
             <StackPanel Orientation="Horizontal">
-            <Image Source="/Images/Animalexpress Logo.png" Margin="0 0 175 0" Width="100" Height="43"/>
-            <TextBlock Margin="0 20 0 0" Width="110" Height="30" Text="Categories" TextAlignment="Center" FontSize="20" FontFamily="verdana"/>
-            </StackPanel>
-            <StackPanel Margin="50 10 50 10" Orientation="Horizontal">
-                <Button Margin="55 0 0 0" Height="130" Width="130">
+            <Image Source="/Images/Animalexpress Logo.png" Margin="-30 -10 205 0" Width="100" Height="43"/>
+            <TextBlock Margin="0 20 200 0" Width="110" Height="30" Text="Categories" TextAlignment="Center" FontSize="20" FontFamily="verdana"/>
+                <Button Margin="0 -2 0 0" Width="60" Height="25" Background="#FFFA7171" Content="Logout" FontSize="15" FontFamily="vendara" BorderThickness="0">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-                <Button  Margin="30 0 0 0" Height="130" Width="130" >
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-                <Button  Margin="30 0 0 0" Height="130" Width="130" >
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <Border Background="{TemplateBinding Background}" 
+        BorderBrush="{TemplateBinding BorderBrush}" 
+        BorderThickness="{TemplateBinding BorderThickness}" 
+        CornerRadius="10">
+                                <!-- Adjust the CornerRadius as needed -->
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
@@ -88,7 +72,40 @@
                 </Button>
             </StackPanel>
             <StackPanel Margin="50 10 50 10" Orientation="Horizontal">
-                <Button  Margin="55 0 0 0" Height="130" Width="130" >
+                <Button Margin="55 0 0 0" Height="130" Width="130" Background="white" BorderBrush="black" BorderThickness="0">
+                    <Image Source="/Images/Dog.png" Stretch="Uniform" Width="120" Height="120"/>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Margin="30 0 0 0" Height="130" Width="130" Background="white" BorderBrush="black" BorderThickness="0" >
+                    <Image Source="/Images/DogAdult.png" Stretch="Uniform" Width="120" Height="120"/>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Margin="30 0 0 0" Height="130" Width="130" Background="white" BorderBrush="black" BorderThickness="0" >
+                    <Image Source="/Images/DogFood.png" Stretch="Uniform" Width="120" Height="120"/>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+            <StackPanel Margin="50 10 50 10" Orientation="Horizontal">
+                <Button  Margin="55 0 0 0" Height="130" Width="130" Background="white" BorderBrush="black" BorderThickness="0" >
+                    <Image Source="/Images/Kitten.png" Stretch="Uniform" Width="120" Height="120"/>
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
@@ -98,7 +115,8 @@
                     </Button.Template>
 
                 </Button>
-                <Button  Margin="30 0 0 0" Height="130" Width="130" >
+                <Button  Margin="30 0 0 0" Height="130" Width="130" Background="white" BorderBrush="black" BorderThickness="0" >
+                    <Image Source="/Images/Cat.png" Stretch="Uniform" Width="120" Height="120"/>
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
@@ -108,7 +126,8 @@
                     </Button.Template>
 
                 </Button>
-                <Button  Margin="30 0 0 0" Height="130" Width="130" >
+                <Button  Margin="30 0 0 0" Height="130" Width="130" Background="white" BorderBrush="black" BorderThickness="0" >
+                    <Image Source="/Images/CatFood.png" Stretch="Uniform" Width="120" Height="120"/>
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
@@ -119,6 +138,96 @@
 
                 </Button>
             </StackPanel>
+        </StackPanel>
+
+
+        <StackPanel x:Name="List" Margin="20 20 20 20" Orientation="Vertical" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/Animalexpress Logo.png" Margin="-30 -10 205 0" Width="100" Height="43"/>
+                    <TextBlock Margin="0 20 200 0" Width="110" Height="30" Text="Inventory" TextAlignment="Center" FontSize="20" FontFamily="verdana"/>
+                <Button Margin="0 -2 0 0" Width="60" Height="25" Background="#FFFFAE80" Content="Back" FontSize="15" FontFamily="vendara" BorderThickness="0">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="10">
+                                    <!-- Adjust the CornerRadius as needed -->
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+
+        <StackPanel x:Name="Information" Margin="20 20 20 20" Orientation="Vertical" Visibility="Visible">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Images/Animalexpress Logo.png" Margin="-30 -10 205 0" Width="100" Height="43"/>
+                <TextBlock Margin="0 20 200 0" Width="110" Height="30" Text="Profile" TextAlignment="Center" FontSize="20" FontFamily="verdana"/>
+                <Button Margin="0 -2 0 0" Width="60" Height="25" Background="#FFFFAE80" Content="Back" FontSize="15" FontFamily="vendara" BorderThickness="0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        CornerRadius="10">
+                                <!-- Adjust the CornerRadius as needed -->
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Margin="0 40 0 0" Orientation="Horizontal" >
+                <Border Margin="100 0 0 0" BorderBrush="Black" BorderThickness="1" Height="200" Width="200"/>
+                <StackPanel Margin= "50 0 0 0"  Orientation="Vertical" >
+                    <TextBlock Margin="0 -10 0 0" HorizontalAlignment="Center" Text="Name" FontFamily="verdana" Background="#FFD2EBFF"  />
+                    <TextBox Margin="0 0 0 0" FontFamily="verdana" Background="White" Width="200" Height="20"  />
+                    <StackPanel Margin="0 5 0 0" Orientation="Horizontal">
+                        <TextBlock Margin="34 0 0 0" HorizontalAlignment="Center" Text="Type" FontFamily="verdana" Background="#FFD2EBFF"  />
+                        <TextBlock Margin="79 0 0 0" HorizontalAlignment="Center" Text="Age" FontFamily="verdana" Background="#FFD2EBFF"  />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Margin="0 0 0 0" FontFamily="verdana" Background="White" Width="94" Height="20"  />
+                        <TextBox Margin="12 0 0 0" FontFamily="verdana" Background="White" Width="94" Height="20"  />
+                    </StackPanel>
+                    <TextBlock Margin="0 5 0 0" HorizontalAlignment="Center" Text="Breed" FontFamily="verdana" Background="#FFD2EBFF"  />
+                    <TextBox Margin="0 0 0 0" FontFamily="verdana" Background="White" Width="200" Height="20"  />
+                    <StackPanel Margin="0 5 0 0" Orientation="Horizontal">
+                        <TextBlock Margin="27 0 0 0" HorizontalAlignment="Center" Text="Gender" FontFamily="verdana" Background="#FFD2EBFF"  />
+                        <TextBlock Margin="44 0 0 0" HorizontalAlignment="Center" Text="Date of Birth" FontFamily="verdana" Background="#FFD2EBFF"  />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Margin="0 0 0 0" FontFamily="verdana" Background="White" Width="94" Height="20"  />
+                        <TextBox Margin="12 0 0 0" FontFamily="verdana" Background="White" Width="94" Height="20"  />
+                    </StackPanel>
+
+                    <StackPanel Margin="0 15 0 0" Orientation="Horizontal">
+                        <Button Margin="13 0 0 0" Content="Edit" FontFamily="verdana" Background="#FFFFAE80" BorderBrush="Transparent" Width="70" Height="25"  >
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                        </Button>
+                        <Button Margin="35 0 0 0" Content="Add" FontFamily="verdana" Background="#FFFFAE80" BorderBrush="Transparent" Width="70" Height="25"  >
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+
+            </StackPanel>
+            
         </StackPanel>
 
 
